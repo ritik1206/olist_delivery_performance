@@ -11,7 +11,7 @@ USE olist;
 
 -- 1. orders (blank dates become NULL)
 TRUNCATE TABLE orders;
-LOAD DATA LOCAL INFILE 'C:/Users/ritik/OneDrive/Desktop/projects/supply_chain/olist/Data/olist_orders_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/path/to/olist/Data/'
 INTO TABLE orders
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -27,7 +27,7 @@ SET
 
 -- 2. customers
 TRUNCATE TABLE customers;
-LOAD DATA LOCAL INFILE 'C:/Users/ritik/OneDrive/Desktop/projects/supply_chain/olist/Data/olist_customers_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/path/to/olist/Data/'
 INTO TABLE customers
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
@@ -36,7 +36,7 @@ IGNORE 1 ROWS;
 
 -- 3. sellers
 TRUNCATE TABLE sellers;
-LOAD DATA LOCAL INFILE 'C:/Users/ritik/OneDrive/Desktop/projects/supply_chain/olist/Data/olist_sellers_dataset.csv'
+LOAD DATA LOCAL INFILE  'C:/path/to/olist/Data/'
 INTO TABLE sellers
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
@@ -45,7 +45,7 @@ IGNORE 1 ROWS;
 
 -- 4. order_items
 TRUNCATE TABLE order_items;
-LOAD DATA LOCAL INFILE 'C:/Users/ritik/OneDrive/Desktop/projects/supply_chain/olist/Data/olist_order_items_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/path/to/olist/Data/'
 INTO TABLE order_items
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
@@ -55,7 +55,7 @@ IGNORE 1 ROWS;
 -- This file has Windows line endings, so '\r\n' is required.
 -- Expect 1 known row with 3 warnings (malformed record), fixed in step 5b.
 TRUNCATE TABLE order_reviews;
-LOAD DATA LOCAL INFILE 'C:/Users/ritik/OneDrive/Desktop/projects/supply_chain/olist/Data/olist_order_reviews_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/path/to/olist/Data/'
 INTO TABLE order_reviews
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
@@ -74,7 +74,7 @@ SET SQL_SAFE_UPDATES = 1;
 
 -- 6. products (blank numbers and categories become NULL)
 TRUNCATE TABLE products;
-LOAD DATA LOCAL INFILE 'C:/Users/ritik/OneDrive/Desktop/projects/supply_chain/olist/Data/olist_products_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/path/to/olist/Data/'
 INTO TABLE products
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
@@ -94,7 +94,7 @@ SET
 
 -- 7. category translation
 TRUNCATE TABLE product_category_translation;
-LOAD DATA LOCAL INFILE 'C:/Users/ritik/OneDrive/Desktop/projects/supply_chain/olist/Data/product_category_name_translation.csv'
+LOAD DATA LOCAL INFILE 'C:/path/to/olist/Data/'
 INTO TABLE product_category_translation
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
@@ -103,7 +103,7 @@ IGNORE 1 ROWS;
 
 -- 8. geolocation (about 1 million rows, takes roughly 20 seconds)
 TRUNCATE TABLE geolocation;
-LOAD DATA LOCAL INFILE 'C:/Users/ritik/OneDrive/Desktop/projects/supply_chain/olist/Data/olist_geolocation_dataset.csv'
+LOAD DATA LOCAL INFILE 'C:/path/to/olist/Data/'
 INTO TABLE geolocation
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
