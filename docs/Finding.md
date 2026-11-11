@@ -56,3 +56,9 @@ The platform's promise already grows with distance, but lateness still rises. Di
 
 ## Superseded readings
 - An early reading that the SP-seller to RJ-customer lane is permanently slow was based on averages that blended calm months with the spike; replaced by F5-F6.
+
+
+## F10: The risk ranking separates good and bad orders
+- Test orders sorted into 10 equal risk groups: late rate falls steadily from 18.2% (highest risk) to 1.0% (lowest).
+- The top 30% of orders hold 57% of all late orders; the bottom 30% hold 10%.
+- Even the top decile is 82% on time, so the score suits low-cost actions (proactive message, early carrier check), not drastic ones.
